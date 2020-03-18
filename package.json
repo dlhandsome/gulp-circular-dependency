@@ -1,0 +1,39 @@
+{
+  "name": "gulp-circular-dependency",
+  "version": "0.1.0",
+  "description": "Detect modules with circular dependencies when processing javascript",
+  "main": "index.js",
+  "scripts": {
+    "release": "./node_modules/.bin/verpub publish",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlhandsome/gulp-circular-dependency.git"
+  },
+  "keywords": [
+    "dependency",
+    "gulp",
+    "circular",
+    "circular",
+    "dependency"
+  ],
+  "author": "dlhandsome <awsomeduan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dlhandsome/gulp-circular-dependency/issues"
+  },
+  "homepage": "https://github.com/dlhandsome/gulp-circular-dependency#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "deepmerge": "^4.2.2",
+    "dependency-tree": "^7.2.1",
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "mocha": "^7.1.0",
+    "verpub": "^0.1.2"
+  }
+}

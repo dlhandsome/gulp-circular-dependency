@@ -1,16 +1,14 @@
 # gulp-circular-dependency
 
-[中文](./README_ZH.md)
+一款用于检测 Javascript 模块循环依赖性的 gulp 插件
 
-Detect modules with circular dependencies when processing javascript
-
-## Install
+## 安装
 
 ```
 npm install --save-dev gulp-circular-dependency
 ```
 
-## Usage
+## 使用
 
 ```js
 const gulp = require('gulp');
@@ -25,7 +23,7 @@ gulp.task('default', () =>
 
 ## API
 
-See the dependency-tree [options](https://github.com/dependents/node-dependency-tree#options).
+参考 dependency-tree [options](https://github.com/dependents/node-dependency-tree#options).
 
 ## License
 
