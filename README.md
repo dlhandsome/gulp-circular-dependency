@@ -1,6 +1,6 @@
 # gulp-circular-dependency
 
-[![build status](https://secure.travis-ci.org/dlhandsome/gulp-circular-dependency.svg)](https://travis-ci.org/dlhandsome/gulp-circular-dependency.svg)
+[![build status](https://secure.travis-ci.org/dlhandsome/gulp-circular-dependency.svg)](https://travis-ci.org/dlhandsome/gulp-circular-dependency.svg) [![npm-version](https://img.shields.io/npm/v/gulp-circular-dependency.svg)](https://www.npmjs.com/package/gulp-circular-dependency)
 
 [中文](./README_ZH.md)
 
