@@ -1,5 +1,7 @@
 # gulp-circular-dependency
 
+[![build status](https://secure.travis-ci.org/dlhandsome/gulp-circular-dependency.svg)](https://travis-ci.org/dlhandsome/gulp-circular-dependency.svg)
+
 [中文](./README_ZH.md)
 
 Detect modules with circular dependencies when processing javascript
