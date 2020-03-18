@@ -1,6 +1,6 @@
 {
   "name": "gulp-circular-dependency",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detect modules with circular dependencies when processing javascript",
   "main": "index.js",
   "scripts": {
@@ -35,5 +35,7 @@
     "gulp": "^4.0.2",
     "mocha": "^7.1.0",
     "verpub": "^0.1.2"
-  }
+  },
+  "_id": "gulp-circular-dependency@0.1.1",
+  "_commitid": "698ad84"
 }
