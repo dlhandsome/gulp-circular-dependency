@@ -1,8 +1,10 @@
-const chalk = require('chalk')
 const path = require('path')
+const PluginError = require('plugin-error')
 const through = require('through2')
 const dependency = require('dependency-tree')
 const merge = require('deepmerge')
+
+const PLUGIN_NAME = 'gulp-circular-dependency'
 
 let _dependencyStack = []
 
@@ -11,16 +13,20 @@ function travelTree (tree, cwd, callback) {
 
   if (dependencies.length === 0) _dependencyStack = []
 
-  dependencies.forEach(d => {   
-    const relativePath = path.relative(cwd, d)
+  dependencies.forEach(dep => {   
+    const relativePath = path.relative(cwd, dep)
 
     if (_dependencyStack.indexOf(relativePath) > -1) {
       _dependencyStack.push(relativePath)
-      throw new Error(' Circular dependency: ' + _dependencyStack.join(' -> '))
+
+      throw new PluginError(
+        PLUGIN_NAME,
+        'Circular dependency: ' + _dependencyStack.join(' -> ')
+      )
     } else {
       _dependencyStack.push(relativePath)
     }
-    travelTree(tree[d], cwd, callback)
+    travelTree(tree[dep], cwd, callback)
   })
 }
 
@@ -50,10 +56,9 @@ module.exports = function gulpCircularDependency (options = {}) {
 
     try {
       travelTree(tree, cwd, callback)
+      callback(null, file)
     } catch (err) {
-      return callback(err, undefined)
+      callback(err, undefined)
     }
-
-    return callback(null, file)
   })
 }
